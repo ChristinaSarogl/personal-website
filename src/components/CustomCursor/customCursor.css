@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.main-cursor {
+  @apply fixed top-0 left-0 w-2 h-2
+    bg-blue-400 rounded-full pointer-events-none
+    z-100 mix-blend-difference;
+}
+
+.cursor-ring {
+  @apply fixed top-0 left-0 w-8 h-8
+    border-2 border-blue-400/30 rounded-full pointer-events-none
+    z-100 mix-blend-difference;
+}

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "../../theme.css";
+
+.header {
+  @apply fixed top-0 left-0 w-full z-10
+    backdrop-blur-xl border-b border-white/5
+    transition-all duration-300 bg-transparent;
+
+  .header-container {
+    @apply max-w-7xl mx-auto 
+      px-6 lg:px-12 py-5
+      flex items-center justify-between;
+
+    .logo {
+      @apply w-8 h-8 bg-primary rounded 
+        flex items-center justify-center 
+        text-white text-xs rotate-12 
+        hover:rotate-0 transition-transform duration-300;
+    }
+
+    .logo-name {
+      @apply text-xl font-semibold tracking-tight;
+    }
+
+    .nav-links {
+      @apply flex items-center gap-6;
+
+      li a {
+        @apply text-white/70 p-2
+          hover:text-white transition-colors duration-200;
+
+        .link-underline {
+          @apply hidden;
+        }
+
+        &.active .link-underline {
+          @apply block absolute -bottom-5 left-0 right-0 h-0.5 
+            bg-gradient-to-r from-primary to-secondary;
+        }
+      }
+    }
+
+    .mobile-menu {
+      @apply lg:hidden leading-0;
+
+      svg {
+        @apply w-8 h-8;
+      }
+    }
+  }
+}
+
+.mobile-elements {
+  @apply absolute z-100 w-full lg:hidden
+    flex flex-col top-18
+    px-6 py-4 
+    border-b border-white/5
+    transition-all duration-500 ease-out;
+
+  &.open {
+    @apply opacity-100 translate-y-0
+  }
+
+  &.closed {
+    @apply max-h-0 opacity-0 -translate-y-3 collapse;
+  }
+
+  .nav-links {    
+    @apply pb-4 space-y-4;
+
+    li a{
+      @apply text-white/70 p-2
+      hover:text-white transition-colors duration-200
+    }
+  }
+}

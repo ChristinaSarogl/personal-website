@@ -1,0 +1,11 @@
+:root {
+  --background: #0a0a0f;
+  --primary: #2b7fff;
+  --secondary: #ad46ff;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}

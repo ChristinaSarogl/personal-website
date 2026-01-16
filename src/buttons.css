@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+a, button {
+  &.text {
+    @apply rounded-full px-6 py-2
+      bg-gradient-to-r from-primary to-secondary
+      text-sm text-center font-medium overflow-hidden
+      transition-transform duration-300
+      hover:scale-105;
+
+    &::after {
+      content: "";
+      @apply absolute inset-0 bg-primary opacity-0 transition-opacity duration-300 -z-10;
+    }
+
+    &:hover::after {
+      @apply opacity-100;
+    }
+  }
+}
