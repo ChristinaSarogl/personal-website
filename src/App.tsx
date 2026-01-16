@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-import CustomCursor from './components/CustomCursor/CustomCursor'
-import Header from './components/Header/Header'
+import CustomCursor from './components/CustomCursor/CustomCursor';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 
 export default function App() {
   return (
@@ -15,6 +13,7 @@ export default function App() {
 
     <div className='content-container'>
       <Header />
+      <Hero />
     </div>
       {/* <div>
         <a href="https://vite.dev" target="_blank">

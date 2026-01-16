@@ -9,3 +9,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 }
+
+.text-color {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}

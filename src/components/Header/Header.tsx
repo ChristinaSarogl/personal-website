@@ -35,7 +35,7 @@ export default function Header() {
                   </NavLink>
                 </li>
               ))}
-              <NavLink to={`/contact`} className={'text'} aria-label='contact'>
+              <NavLink to={`/contact`} className={'text color small'} aria-label='contact'>
                 Let's Talk
               </NavLink>
             </ul>            
@@ -54,7 +54,7 @@ export default function Header() {
           {NAV_LINKS.map(({key, label, path}) => (
             <li key={key}>
               <NavLink to={`/${path}`}
-                className={({ isActive }) => isActive ? "relative active" : "relative"} aria-label={`${label}`}
+                className={"relative"} aria-label={`${label}`}
                 onClick={() => {
                   setIsOpen?.((prev) => !prev);
                 }}>
@@ -63,7 +63,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <NavLink to={`/contact`} className={'text'} aria-label='contact'>
+        <NavLink to={`/contact`} className={'text color small'} aria-label='contact'>
           Let's Talk
         </NavLink>
       </nav>
