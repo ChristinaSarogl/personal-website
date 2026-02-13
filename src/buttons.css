@@ -3,7 +3,7 @@
 
 a, button {
   &.text {
-    @apply rounded-full px-8 py-4
+    @apply rounded-full px-6 md:px-8 py-3 md:py-4
       text-base text-center font-medium overflow-hidden
       hover:scale-105;
 
@@ -22,7 +22,7 @@ a, button {
     }
     
     &.icon {
-      @apply flex flex-wrap gap-2 px-8 py-4;
+      @apply flex flex-wrap gap-2 px-6 md:px-8 py-3 md:py-4;
     }
   }
 

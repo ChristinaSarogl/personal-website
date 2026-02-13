@@ -56,11 +56,9 @@ export default function Hero() {
         <div className="orb right" />
       </div>
 
-      <motion.div
-        style={{opacity, scale}}>
-
         <motion.div 
           variants={containerVariants}
+          style={{opacity, scale}}
           initial="hidden"
           animate="visible"
           className="hero-content">
@@ -112,21 +110,7 @@ export default function Hero() {
               </Link>
             ))}
           </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="indicator">
-            <div className="indicator-outline">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="indicator-dot">
-              </motion.div>
-            </div>
-          </motion.div>
-        </motion.div>      
-      </motion.div>
+        </motion.div>  
     </section>
   );
 }

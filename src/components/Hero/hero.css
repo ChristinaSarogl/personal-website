@@ -21,12 +21,13 @@
   }
 
   .hero-content {
-    @apply max-w-6xl mx-auto px-6 lg:px-12 text-center space-y-8 z-1
+    @apply relative max-w-6xl mx-auto px-6 lg:px-12 text-center 
+      space-y-6 md:space-y-8 z-1
       flex flex-col items-center;
 
     .badge {
       @apply flex items-center justify-center gap-2
-        w-fit px-4 py-2 rounded-full mb-10
+        w-fit px-4 py-2 rounded-full md:mb-10
         bg-white/5 border border-white/10 backdrop-blur-sm;
       
       .pulse-circle{
@@ -61,21 +62,6 @@
 
     .social-links{
       @apply flex items-center justify-center gap-6 pt-8;
-    }
-
-    .indicator {
-      @apply absolute bottom-12 left-1/2 -translate-x-1/2;
-
-      .indicator-outline {
-        @apply w-6 h-10 rounded-full
-          border-2 border-white/20
-          flex items-start justify-center p-2;
-      }
-
-      .indicator-dot {
-        @apply w-1.5 h-1.5 rounded-full
-          border-2 border-white/50;
-      }
     }
   }
 }
