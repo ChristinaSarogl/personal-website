@@ -1,6 +1,7 @@
 import './App.css'
 
 import CustomCursor from './components/CustomCursor/CustomCursor';
+import Divider from './components/Divider/Divider';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 
@@ -14,6 +15,7 @@ export default function App() {
     <div className='content-container'>
       <Header />
       <Hero />
+      <Divider />
     </div>
       {/* <div>
         <a href="https://vite.dev" target="_blank">
