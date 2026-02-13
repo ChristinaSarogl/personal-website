@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { useState } from "react";
+import { motion } from "motion/react";
 import MobileMenu from "../icons/MobileMenu";
 
 import "./header.css";
@@ -16,7 +17,11 @@ export default function Header() {
 
   return (
     <section>
-      <header className="header">
+      <motion.header 
+        initial = {{ y: -100, opacity:0 }}
+        animate = {{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: ['easeIn'] }}
+        className="header">
         <div className="header-container">
           <a className="group flex items-center gap-2">
             <div className="logo">CS</div>
@@ -47,7 +52,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       <nav className={`mobile-elements ${isOpen ? 'open' : 'closed'}`} aria-label="Mobile menu">
         <ul className="nav-links" role="list">

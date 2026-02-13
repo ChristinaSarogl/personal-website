@@ -2,12 +2,14 @@
   --background: #0a0a0f;
   --primary: #2b7fff;
   --secondary: #ad46ff;
+  --off-white: rgba(255, 255, 255, 0.6);
 }
 
 @theme {
   --color-background: var(--background);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-off-white: var(--off-white);
 }
 
 .text-color {
