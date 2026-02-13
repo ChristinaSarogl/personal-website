@@ -98,6 +98,19 @@ export default function Hero() {
             </Link>
           ))}
         </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="indicator">
+          <div className="indicator-outline">
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="indicator-dot">
+            </motion.div>
+          </div>
+        </motion.div>
       </motion.div>      
     </section>
   );

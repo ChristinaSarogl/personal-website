@@ -62,5 +62,20 @@
     .social-links{
       @apply flex items-center justify-center gap-6 pt-8;
     }
+
+    .indicator {
+      @apply absolute bottom-12 left-1/2 -translate-x-1/2;
+
+      .indicator-outline {
+        @apply w-6 h-10 rounded-full
+          border-2 border-white/20
+          flex items-start justify-center p-2;
+      }
+
+      .indicator-dot {
+        @apply w-1.5 h-1.5 rounded-full
+          border-2 border-white/50;
+      }
+    }
   }
 }
