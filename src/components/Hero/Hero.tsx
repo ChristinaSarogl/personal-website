@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 import RightArrow from "../icons/RightArrow";
 import Github from "../icons/Github";
@@ -15,6 +16,16 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Hero() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,79 +50,83 @@ export default function Hero() {
 
 
   return (
-    <section className="hero-container">
+    <section ref={heroRef} className="hero-container">
       <div className="hero-bg">
         <div className="orb left"/>
         <div className="orb right" />
       </div>
 
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="hero-content">
+      <motion.div
+        style={{opacity, scale}}>
 
-        <motion.div variants={itemVariants} className="badge">
-          <span className="pulse-circle" />
-          <p className="badge-content">Available for work</p>
-        </motion.div>        
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="hero-content">
 
-        <motion.div variants={itemVariants} className="hero-top-caption">
-          <p>ADAPTABLE • FAST-LEARNING • ANALYTICAL</p>
-        </motion.div>
+          <motion.div variants={itemVariants} className="badge">
+            <span className="pulse-circle" />
+            <p className="badge-content">Available for work</p>
+          </motion.div>        
 
-        <motion.div variants={itemVariants}>
-          <h1 className="hero-title">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}>
-                Christina {" "}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="text-color">
-                Saroglaki
-            </motion.span>
-          </h1>
-        </motion.div>
+          <motion.div variants={itemVariants} className="hero-top-caption">
+            <p>ADAPTABLE • FAST-LEARNING • ANALYTICAL</p>
+          </motion.div>
 
-        <motion.p variants={itemVariants} className="hero-caption">
-          Turning coffee into code since 2018. Fast learner, slower sleeper.{" "}
-          <br className="hidden md:block" />
-          Building products that <em className="text-white/80 not-italic">actually</em> work.
-        </motion.p>
+          <motion.div variants={itemVariants}>
+            <h1 className="hero-title">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}>
+                  Christina {" "}
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="text-color">
+                  Saroglaki
+              </motion.span>
+            </h1>
+          </motion.div>
 
-        <motion.div variants={itemVariants} className="cta-buttons">
-          <Link to={'/projects'} className={'text icon color'}>
-            View Projects <RightArrow/>
-          </Link>
-          <Link to={'/about'} className={'text ghost'}>Learn More</Link>
-        </motion.div>
+          <motion.p variants={itemVariants} className="hero-caption">
+            Turning coffee into code since 2018. Fast learner, slower sleeper.{" "}
+            <br className="hidden md:block" />
+            Building products that <em className="text-white/80 not-italic">actually</em> work.
+          </motion.p>
 
-        <motion.div variants={itemVariants} className="social-links">
-          {SOCIAL_LINKS.map(({key, Icon, path}) => (
-            <Link key={key} to={`/${path}`} className="icon ghost">
-              <Icon />
+          <motion.div variants={itemVariants} className="cta-buttons">
+            <Link to={'/projects'} className={'text icon color'}>
+              View Projects <RightArrow/>
             </Link>
-          ))}
-        </motion.div>
+            <Link to={'/about'} className={'text ghost'}>Learn More</Link>
+          </motion.div>
 
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="indicator">
-          <div className="indicator-outline">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="indicator-dot">
-            </motion.div>
-          </div>
-        </motion.div>
-      </motion.div>      
+          <motion.div variants={itemVariants} className="social-links">
+            {SOCIAL_LINKS.map(({key, Icon, path}) => (
+              <Link key={key} to={`/${path}`} className="icon ghost">
+                <Icon />
+              </Link>
+            ))}
+          </motion.div>
+
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="indicator">
+            <div className="indicator-outline">
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="indicator-dot">
+              </motion.div>
+            </div>
+          </motion.div>
+        </motion.div>      
+      </motion.div>
     </section>
   );
 }
