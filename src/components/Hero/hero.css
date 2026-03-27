@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../../theme.css";
+@import "../../styles/theme.css";
 
 .hero-container {
   @apply min-h-screen flex items-center justify-center overflow-hidden;

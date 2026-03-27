@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import MobileMenu from "../icons/MobileMenu";
 
 import "./header.css";
-import "../../buttons.css";
+import "../../styles/buttons.css";
 
 const NAV_LINKS = [
   { key: "Home", label: "Home", path: "" },

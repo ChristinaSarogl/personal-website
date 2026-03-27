@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../../theme.css";
+@import "../../styles/theme.css";
 
 .header {
   @apply relative top-0 left-0 w-full z-20

@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import "../../theme.css";
+@import "../../styles/theme.css";
 
 .divider-container {
   @apply py-10 px-6 md:px-12 lg:px-40 relative overflow-hidden
     flex flex-col md:flex-row items-baseline gap-6
-    border border-white/5;
+    border-t border-white/5;
 
   .divider-title {
     @apply absolute -bottom-3 md:-bottom-5 left-0 

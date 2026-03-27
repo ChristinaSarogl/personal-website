@@ -1,0 +1,173 @@
+[
+  {
+    "id": "personal-website-redesign",
+    "title": "Personal Website Redesign",
+    "tagline": "Modern developer portfolio built with React + TypeScript",
+    "description": "A complete redesign of my personal developer portfolio focused on performance, scalability, and clean UI architecture. Built using React, TypeScript, and Vite, with a component-driven structure and reusable component design.",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router"
+    ],
+    "features": [
+      "Component-based architecture",
+      "Reusable UI sections",
+      "Dynamic project rendering from JSON",
+      "Responsive design",
+      "Optimized build with Vite"
+    ],
+    "year": "2026",
+    "github": "https://github.com/yourusername/portfolio",
+    "live": "https://yourwebsite.com",
+    "image": "/images/projects/personal-website.png",
+    "category": "web",
+    "status": "In process"
+  },
+  {
+    "id": "oxygen-bookings",
+    "title": "Oxygen Bookings",
+    "tagline": "Production-ready class reservation platform",
+    "description": "A class reservation platform built with React, TypeScript, and Appwrite. The system includes secure authentication, role-based access control (RBAC), automated email notifications, and an administrative dashboard for managing bookings and users.",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Appwrite",
+      "REST APIs"
+    ],
+    "features": [
+      "Secure user authentication",
+      "Role-Based Access Control (RBAC)",
+      "Class reservation system",
+      "Admin dashboard",
+      "Automated email notifications",
+      "Database-driven booking management"
+    ],
+    "year": "2025",
+    "github": null,
+    "live": "https://oxygen-bookings.appwrite.network/",
+    "image": "/images/projects/oxygen-bookings.png",
+    "category": "web",
+    "status": "completed"
+  },
+  {
+    "id": "allergens-prediction",
+    "title": "Allergens Prediction Models",
+    "tagline": "Evaluating protein encoding schemes for allergenicity prediction",
+    "description": "Master’s thesis project exploring how different protein encoding strategies impact the performance of convolutional neural networks in predicting allergenic proteins. The study compares integer encoding, hydrophobicity encoding and embeddings from protein language models, achieving state-of-the-art performance with ESM-2 embeddings.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "NumPy",
+      "scikit-learn",
+      "Plotly",
+      "Ray Tune"
+    ],
+    "features": [
+      "Protein sequence preprocessing and encoding",
+      "Implementation of multiple CNN models",
+      "10-fold cross-validation",
+      "Comparison of encoding schemes",
+      "Performance visualization and metric reporting"
+    ],
+    "year": "2025",
+    "github": "https://github.com/ChristinaSarogl/Allergens_Prediction",
+    "live": null,
+    "image": "/images/projects/allergens-prediction.png",
+    "category": "ai",
+    "status": "completed"
+  },
+  {
+    "id": "computer-vision-modules",
+    "title": "Computer Vision Algorithms",
+    "tagline": "Image processing and 3D reconstruction implementations",
+    "description": "A collection of three computer vision mini-projects developed for a master’s level Computer Vision module. The projects showcase classical corner detection and image stitching, image segmentation techniques, and sparse 3D reconstruction from stereo image pairs.",
+    "techStack": ["Python", "OpenCV", "NumPy"],
+    "features": [
+      "Corner detection and panorama stitching",
+      "Image segmentation using clustering and graph-based methods",
+      "Sparse 3D reconstruction from stereo images"
+    ],
+    "year": "2024",
+    "github": "https://github.com/ChristinaSarogl/Computer_Vision",
+    "live": null,
+    "image": "/images/projects/computer-vision.png",
+    "category": "ai",
+    "status": "completed"
+  },
+  {
+    "id": "connect-four-game",
+    "title": "Connect Four Game (Course Project)",
+    "tagline": "Console-based Connect Four with Minimax algorithm",
+    "description": "A console-based implementation of the classic Connect Four game in Java, developed for a master’s level course. The game features two-player, zero-sum logic and uses the Minimax algorithm to model game decision logic, with plans for GUI support in future iterations.",
+    "techStack": ["Java"],
+    "features": [
+      "Classic Connect Four gameplay logic",
+      "Two-player zero-sum interaction",
+      "Minimax algorithm for game decision logic",
+      "Modular Java classes representing game components"
+    ],
+    "year": "2025",
+    "github": "https://github.com/ChristinaSarogl/Connect-Four",
+    "live": null,
+    "image": "/images/projects/connect-four.png",
+    "category": "ai",
+    "status": "completed"
+  }, 
+  {
+    "id": "geoscavenger",
+    "title": "GeoScavenger",
+    "tagline": "Location-based treasure hunt management system",
+    "description": "GeoScavenger is a mobile and web platform that enables interactive treasure hunt experiences. Players can join hunts, track their progress on an interactive map, follow clues, and communicate with organizers in real time. The system also includes built-in emergency support for player safety. Hunt organizers use the companion web dashboard to create and manage hunts, monitor player locations, and communicate instantly with participants.",
+    "techStack": [
+      "PHP",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "features": [
+      "Mobile app with player authentication and profile management",
+      "Interactive map with treasure hunt clues and activities",
+      "Instant messaging between players and organizers",
+      "Emergency help button with location sharing",
+      "Web dashboard for creating and managing hunts",
+      "Real-time player tracking on the map"
+    ],
+    "year": "2022",
+    "github": "https://github.com/ChristinaSarogl/GeoScavenger",
+    "live": null,
+    "image": "/images/projects/geoscavenger.png",
+    "category": ["web", "mobile"],
+    "status": "completed"
+  }, 
+  {
+    "id": "bookhood",
+    "title": "BookHood",
+    "tagline": "Online book discovery & reading tracker",
+    "description": "BookHood is a user-friendly online platform for book lovers to discover and organize their reading journey. Users can explore books filtered by genre, rating, or recent additions, add ratings and reviews, manage personal reading lists, and find the nearest bookstore using map integration.",
+    "techStack": [
+      "PHP",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "features": [
+      "Book discovery with filtering by genre, rating, and time added",
+      "Display of key book details (cover, author, summary, ISBN, etc.)",
+      "Personal reading lists: Want to Read, Reading, Completed",
+      "User ratings and reviews",
+      "Search across book repository",
+      "Nearest bookstore lookup with map integration"
+    ],
+    "year": "2022",
+    "github": "https://github.com/ChristinaSarogl/BookHood",
+    "live": null,
+    "image": "/images/projects/bookhood.png",
+    "category": "web",
+    "status": "completed"
+  }
+]

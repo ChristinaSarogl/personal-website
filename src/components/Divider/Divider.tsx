@@ -12,7 +12,7 @@ export default function Divider() {
       <h2 className="divider-title">EXPERTISE</h2>
 
       <div className="divider-content">
-        <h3>I speak fluently in <span className="text-primary italic">code</span> and human.</h3>
+        <h3>I speak fluently in <span className="text-color">code</span> and human.</h3>
         <p>
           I turn ideas into interfaces and designs into production code. I like my components reusable, 
           my APIs predictable, and my commits meaningful.
