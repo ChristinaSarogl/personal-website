@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section>
       <div className="contact-container">
-        <h2 className="contact-title"><span>Let's build something amazing</span></h2>
+        <h2 className="contact-title"><span>Let's build something amazing!</span></h2>
         <p className="contact-description">
           Always open to interesting projects and collaborations.<br />
           Drop me a line and let's chat.
