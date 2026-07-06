@@ -1,7 +1,7 @@
-import CustomCursor from './components/CustomCursor/CustomCursor';
+import CustomCursor from './components/common/CustomCursor/CustomCursor';
 import Divider from './components/Divider/Divider';
 import FeaturedWork from './components/FeaturedWork/FeaturedWork';
-import Header from './components/Header/Header';
+import Header from './components/common/Header/Header';
 import Hero from './components/Hero/Hero';
 
 export default function App() {

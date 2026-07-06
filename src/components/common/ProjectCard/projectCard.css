@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.project-card {
+  @apply relative border border-white/5 rounded-2xl cursor-pointer
+    bg-gradient-to-br from-white/5 to-white/0
+    hover:border-primary/40
+    overflow-hidden transition-all duration-300;
+
+    .project-card-img {
+      @apply h-52 relative overflow-hidden;
+
+      .card-img {
+        @apply w-full h-full object-cover transition-transform duration-1000 opacity-50
+          group-hover:scale-105 group-hover:opacity-100;
+      }
+    }
+
+    .project-year-badge {
+      @apply absolute top-4 right-4 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border-white/20 text-sm z-10;
+    }
+
+    .gradient-bridge {
+      @apply absolute left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0a0a0f] pointer-events-none z-20;
+      top: calc(13rem - 6rem);
+    }
+
+    .project-card-content {
+      @apply p-6 space-y-3;
+
+      .project-card-container {
+        @apply flex items-center justify-between;
+
+        .project-card-title {
+          @apply text-xl font-semibold group-hover:text-primary tracking-tighter transition-all;
+        }
+        
+        .project-card-subtitle {
+          @apply text-[10px] font-bold text-zinc-600 tracking-widest uppercase mt-4;
+        }
+      }
+
+      .project-card-description {
+        @apply text-sm text-white/60 line-clamp-2
+      }
+
+      .project-card-tech {
+        @apply flex flex-wrap gap-2;
+
+        .tech-badge {
+          @apply text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70;
+        }
+      }
+
+      .project-card-links {
+        @apply flex justify-between items-center gap-3 pt-2;
+
+        .project-link {
+          @apply flex items-center gap-2 text-sm text-blue-400 group-hover:gap-3 transition-all;
+        }
+
+        .project-link-icons {
+          @apply flex items-center gap-3;
+
+          .project-link-icon {
+            @apply ml-auto p-2 rounded-full hover:bg-white/10 transition-colors;
+          }
+        }
+      }
+      
+    }
+}
