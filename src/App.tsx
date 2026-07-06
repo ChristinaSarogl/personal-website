@@ -3,6 +3,7 @@ import Divider from './components/Divider/Divider';
 import FeaturedWork from './components/FeaturedWork/FeaturedWork';
 import Header from './components/common/Header/Header';
 import Hero from './components/Hero/Hero';
+import Contact from './components/Contact/Contact';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Hero />
       <Divider />
       <FeaturedWork />
+      <Contact />
     </div>
       {/* <div>
         <a href="https://vite.dev" target="_blank">

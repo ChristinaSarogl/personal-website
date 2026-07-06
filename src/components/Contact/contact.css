@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "../../styles/theme.css";
+
+.contact-container {
+    @apply py-10 px-6 md:px-12 lg:px-40 overflow-hidden text-center;
+
+    .contact-title {
+        @apply md:mt-5 lg:mt-20 text-center text-3xl md:text-4xl lg:text-6xl;
+    }
+
+    .contact-description {
+        @apply mt-8 md:mt-10 mb-10 md:mb-15 text-lg text-white/70 max-w-2xl mx-auto text-center;
+    }
+}
