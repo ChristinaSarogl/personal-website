@@ -20,11 +20,13 @@ export default function ProjectCard({ index }: { index: number }) {
           },
           visible: {
             y: 0,
-            opacity: 1.2,
+            opacity: 1,
             transition: {
-              duration: 1,
-              ease: [0.22, 1, 0.36, 1],
-              delay: index * 0.2,
+              type: "spring",
+              stiffness: 90,
+              damping: 18,
+              mass: 0.8,
+              delay: index * 0.15,
             },
           },
         }}
@@ -60,7 +62,7 @@ export default function ProjectCard({ index }: { index: number }) {
             </Link>
 
             <div className='project-link-icons'>
-              <Link className='project-link-icon'to={`/projects/${index}`} aria-label={`View project ${index} on GitHub`}>
+              <Link className='project-link-icon' to={`/projects/${index}`} aria-label={`View project ${index} on GitHub`}>
                 <Github />
               </Link>
 
