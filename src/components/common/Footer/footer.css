@@ -13,7 +13,7 @@ footer {
       }
 
       .footer-links {
-        @apply flex flex-col md:flex-row gap-5 md:gap-12 text-center md:text-left mt-4 md:mt-0;
+        @apply flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-12 text-center md:text-left mt-4 md:mt-0;
 
         a {
           @apply text-sm font-bold tracking-[0.3rem] text-zinc-400 hover:text-white transition-colors uppercase;
