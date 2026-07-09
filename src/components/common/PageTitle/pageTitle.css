@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.title-container {
+  .sub-title {
+    @apply text-white/70 text-sm uppercase transition-all duration-1000 translate-y-0 opacity-100;
+  }
+
+  .featured-title {
+    @apply text-3xl md:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 leading-tight tracking-tighter;
+  }
+}

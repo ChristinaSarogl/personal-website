@@ -2,16 +2,17 @@ import { Link } from "react-router";
 import ProjectCard from '../common/ProjectCard/ProjectCard';
 
 import './featuredWork.css';
+import PageTitle from "../common/PageTitle/PageTitle";
 
 export default function FeaturedWork() {
   return (
     <section>
       <div className="featured-container">
         <div className='featured-title-container'>
-          <div className='title-container'>
-            <p className='sub-title'>A selection of projects I am most proud of</p>
-            <h2 className='featured-title'>Featured Work</h2>
-          </div>
+          <PageTitle
+            title='Featured Work'
+            subtitle='A selection of projects I am most proud of'
+          />
 
           <Link className='featured-projects-link group' to='/projects' aria-label='Explore all work'>
             Explore All Work
