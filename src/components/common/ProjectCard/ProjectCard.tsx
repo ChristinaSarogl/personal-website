@@ -6,13 +6,13 @@ import ExternalLink from "../../icons/ExternalLink";
 
 import './projectCard.css';
 
-export default function ProjectCard({ index }: { index: number }) {
+export default function ProjectCard({ index, animationIndex }: { index: number, animationIndex: number }) {
   return (
     <>
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={{
           hidden: {
             y: 30,
@@ -26,7 +26,7 @@ export default function ProjectCard({ index }: { index: number }) {
               stiffness: 90,
               damping: 18,
               mass: 0.8,
-              delay: index * 0.15,
+              delay: animationIndex * 0.1,
             },
           },
         }}
@@ -52,6 +52,7 @@ export default function ProjectCard({ index }: { index: number }) {
 
           <div className="project-card-tech">
             <p className='tech-badge'>Typescript</p>
+            <p className='tech-badge'>React</p>
             <p className='tech-badge'>+2</p>
           </div>
 

@@ -2,7 +2,7 @@
 @import "../../styles/theme.css";
 
 .divider-container {
-  @apply relative flex flex-col md:flex-row items-baseline gap-6
+  @apply py-10 relative flex flex-col md:flex-row items-baseline gap-6
     border-t border-white/5;
 
   .divider-title {

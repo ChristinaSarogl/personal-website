@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8;
+}

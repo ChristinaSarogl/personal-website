@@ -2,8 +2,8 @@ import "./divider.css";
 
 export default function Divider() {
   const skills = [
-    'JavaScript', 'TypeScript', 'Java', 'Python',
-    'React', 'HTML/CSS', 'MySQL', 'Git'
+    'JavaScript', 'TypeScript', 'HTML/CSS', 'React',
+    'Java', 'Python', 'MySQL', 'Git'
   ]
 
   return (

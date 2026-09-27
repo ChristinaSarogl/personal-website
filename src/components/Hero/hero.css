@@ -8,14 +8,15 @@
     @apply absolute inset-0 overflow-hidden;
 
     .orb {
-      @apply absolute w-96 h-96 rounded-full blur-3xl;
+      @apply absolute w-110 h-110
+        rounded-full blur-3xl;
     
       &.left {
-        @apply top-1/4 left-1/4  bg-blue-500/20;
+        @apply top-1/5 left-1/4  bg-blue-500/20;
       }
 
       &.right {
-        @apply top-1/3 right-1/4 bg-purple-500/20;
+        @apply top-1/4 right-1/4 bg-purple-500/20;
       }
     }
   }

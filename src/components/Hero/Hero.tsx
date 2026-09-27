@@ -50,7 +50,7 @@ export default function Hero() {
 
 
   return (
-    <section ref={heroRef} className="hero-container">
+    <div ref={heroRef} className="hero-container">
       <div className="hero-bg">
         <div className="orb left" />
         <div className="orb right" />
@@ -65,7 +65,7 @@ export default function Hero() {
 
         <motion.div variants={itemVariants} className="badge">
           <span className="pulse-circle" />
-          <p className="badge-content">Available for work</p>
+          <p className="badge-content">Open to the right opportunity</p>
         </motion.div>
 
         <motion.div variants={itemVariants} className="hero-top-caption">
@@ -91,9 +91,9 @@ export default function Hero() {
         </motion.div>
 
         <motion.p variants={itemVariants} className="hero-caption">
-          Turning coffee into code since 2018. Fast learner, slower sleeper.{" "}
+          I turn complex problems into software that feels simple —
           <br className="hidden md:block" />
-          Building products that <em className="text-white/80 not-italic">actually</em> work.
+          and learn <em className="text-white/80 not-italic">whatever</em> it takes to build it right.
         </motion.p>
 
         <motion.div variants={itemVariants} className="cta-buttons">
@@ -127,6 +127,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 }

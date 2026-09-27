@@ -8,7 +8,7 @@
     overflow-hidden transition-all duration-300;
 
     .project-card-img {
-      @apply h-52 relative overflow-hidden;
+      @apply h-60 relative overflow-hidden;
 
       .card-img {
         @apply w-full h-full object-cover transition-transform duration-1000 opacity-50
@@ -32,7 +32,7 @@
         @apply flex items-center justify-between;
 
         .project-card-title {
-          @apply text-xl font-semibold group-hover:text-primary tracking-tighter transition-all;
+          @apply text-xl font-semibold group-hover:text-primary tracking-tighter transition-all text-gray-300;
         }
         
         .project-card-subtitle {

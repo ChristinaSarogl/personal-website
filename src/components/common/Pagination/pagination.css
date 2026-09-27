@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.bubble {
+  @apply relative z-10 flex h-9 w-9 items-center justify-center rounded-full;
+}
+
+.active-page-indicator {
+  @apply absolute left-0 top-0 h-9 w-9 rounded-full bg-gradient-to-r from-primary to-secondary;
+
+  transition: transform 300ms ease;
+}
+
+button .small {
+  @apply text-[0]! md:text-base;
+}

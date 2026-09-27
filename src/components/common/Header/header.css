@@ -7,21 +7,16 @@
     transition-all duration-300 bg-transparent;
 
   .header-container {
-    @apply max-w-7xl mx-auto 
-      px-6 lg:px-12 py-4
+    @apply px-6 lg:px-12 py-4
       flex items-center justify-between;
 
     .logo {
-      @apply w-8 h-8 bg-primary rounded 
-        flex items-center justify-center 
-        text-white text-xs rotate-12 
-        hover:rotate-0 transition-transform duration-300;
-    }
+        @apply tracking-tighter w-max text-2xl font-extrabold;
 
-    .logo-name {
-      @apply text-xl font-semibold tracking-tight;
+        span {
+          @apply text-primary;
+        }
     }
-
     .nav-links {
       @apply flex items-center gap-6;
 

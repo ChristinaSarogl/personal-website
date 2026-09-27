@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useState } from "react";
 import { motion } from "motion/react";
 import MobileMenu from "../../icons/MobileMenu";
@@ -23,11 +23,9 @@ export default function Header() {
         transition={{ duration: 0.6, ease: ['easeIn'] }}
         className="header">
         <div className="header-container">
-          <a className="group flex items-center gap-2">
-            <div className="logo">CS</div>
-            <span className="logo-name">Christina Saroglaki</span>
-          </a>
-          
+          <Link to="/" className="logo" aria-label="Christina Saroglou, home">
+            CS<span>.</span>
+          </Link>
 
           <nav className="desktop-only" aria-label="Navigation">
             <ul className="nav-links" role="list">
