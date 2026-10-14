@@ -62,7 +62,7 @@ export default function Info() {
       </div>
 
       <div>
-        image
+        
       </div>
     </div>
   );
