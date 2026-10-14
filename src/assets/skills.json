@@ -1,0 +1,90 @@
+[
+  {
+    "id": "frontend",
+    "title": "Frontend Development",
+    "description": "Turning ideas into responsive, intuitive, and visually engaging interfaces.",
+    "icon": "panels-top-left",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Vite"
+    ]
+  },
+  {
+    "id": "backend",
+    "title": "Backend & Databases",
+    "description": "Building the logic, APIs, and data systems that keep applications running.",
+    "icon": "database",
+    "skills": [
+      "Java",
+      "Spring",
+      "Node.js",
+      "MySQL",
+      "REST APIs",
+      "Google Firestore",
+      "Appwrite"
+    ]
+  },
+  {
+    "id": "ai",
+    "title": "AI & Machine Learning",
+    "description": "Exploring data, training models, and turning complex problems into practical solutions.",
+    "icon": "brain-circuit",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Computer Vision",
+      "Deep Learning",
+      "PyTorch",
+      "NumPy",
+      "Model Evaluation"
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Tools & DevOps",
+    "description": "The tools I use to keep development organized, collaborative, and efficient.",
+    "icon": "wrench",
+    "skills": [
+      "Git",
+      "Docker",
+      "Jenkins",
+      "Jira",
+      "Codex"
+    ]
+  },
+  {
+    "id": "practices",
+    "title": "Development Practices",
+    "description": "Writing maintainable code, collaborating effectively, and improving how software gets built.",
+    "icon": "workflow",
+    "skills": [
+      "Agile",
+      "Scrum",
+      "Responsive Design",
+      "Reusable Components",
+      "User Acceptance Testing",
+      "Troubleshooting",
+      "Debugging"
+    ]
+  },
+  {
+    "id": "soft-skills",
+    "title": "Beyond the Code",
+    "description": "Because great software is built with curiosity, communication, and teamwork.",
+    "icon": "users",
+    "skills": [
+      "Problem Solving",
+      "Critical Thinking",
+      "Teamwork",
+      "Time Management",
+      "Mentoring"
+    ]
+  }
+]

@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import './pagination.css';
 import LeftArrowBtn from '../../icons/LeftArrowBtn';
 import RightArrowBtn from '../../icons/RightArrowBtn';
@@ -21,7 +19,12 @@ export default function Pagination({ page, totalPages, setPage }: PaginationsPro
   }
 
   function getVisiblePages() {
-    if (page < 1) {
+    if (totalPages <= 3) {
+      return Array.from({ length: totalPages }, (_, i) => i);
+    }
+
+    // First page
+    if (page === 0) {
       return [0, 1, 2];
     }
 
@@ -37,13 +40,11 @@ export default function Pagination({ page, totalPages, setPage }: PaginationsPro
 
   const visiblePages = getVisiblePages();
 
-  const activePosition =
-    page === 0 ? 0 :
-      page === totalPages - 1 ? 2 : 1;
+  const activePosition = visiblePages.indexOf(page);
 
   return (
     <div className="flex justify-center gap-4 mt-8">
-      <button className={`small text ghost icon ${page === 0 ? 'disabled' : ''}`}
+      <button className={`small text ghost icon relative ${page === 0 ? 'disabled' : ''}`}
         onClick={() => goTo(page - 1)}
         disabled={page === 0}>
         <LeftArrowBtn />

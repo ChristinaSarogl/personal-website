@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
+import type { SkillCategory } from "../../TextGrid/TextGrid";
 
 import './textCard.css';
 
-export default function TextCard({animationIndex} : { animationIndex: number }) {
+export default function TextCard({ skill, animationIndex }: { skill: SkillCategory, animationIndex: number }) {
   return (
     <>
       <motion.div
@@ -31,13 +32,15 @@ export default function TextCard({animationIndex} : { animationIndex: number }) 
         <div className='gradient-bridge' />
 
         <div className='text-card-content'>
-          <h3 className='text-card-title text-color'>Frontend</h3>
+          <h3 className='text-card-title text-color'>{skill.title}</h3>
 
-          <ol className='text-card-list'>
-            <li className='text-card-item'>React</li>
-            <li className='text-card-item'>TypeScript</li>
-            <li className='text-card-item'>Tailwind CSS</li>
-          </ol>
+          {skill.skills?.length > 0 && (
+            <ol className='text-card-list'>
+              {skill.skills.map((skillItem, index) => (
+                <li key={index} className='text-card-item'>{skillItem}</li>
+              ))}
+            </ol>
+          )}
         </div>
       </motion.div>
     </>

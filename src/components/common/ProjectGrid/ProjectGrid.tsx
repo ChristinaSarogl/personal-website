@@ -1,19 +1,34 @@
 import { useState } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import Pagination from '../Pagination/Pagination';
 
 import './projectgrid.css';
-import Pagination from '../Pagination/Pagination';
+import projectsData from '../../../assets/projects.json';
 
 type ProjectGridProps = {
   displayed?: number;
   pageable?: boolean
 }
 
-export default function ProjectGrid({ displayed = 10, pageable = true }: ProjectGridProps) {
-  // Replace this with your actual projects array
-  const projects = Array.from({ length: 30 }, (_, i) => i + 1);
+export type Project = {
+  id: string;
+  title: string;
+  tagline: string;
+  description: string;
+  techStack: string[];
+  features: string[];
+  year: string;
+  github: string | null;
+  live: string | null;
+  image: string;
+  category: string | string[];
+  status: string;
+};
 
+export default function ProjectGrid({ displayed = 10, pageable = true }: ProjectGridProps) {
   const [page, setPage] = useState(0);
+
+  const projects = projectsData;
 
   const totalPages = Math.ceil(projects.length / displayed);
 
@@ -27,12 +42,12 @@ export default function ProjectGrid({ displayed = 10, pageable = true }: Project
       <div className='projects-grid pb-8'>
         {visibleProjects.map((project, index) => (
           <div
-            key={project}
+            key={project.id}
             className={`transition-all duration-1000 
             ${index % 2 === 1 ? "md:translate-y-8" : ""}
             ${index % 3 === 1 ? "lg:translate-y-8" : "lg:translate-y-0"}`}
           >
-            <ProjectCard index={project} animationIndex={index}/>
+            <ProjectCard project={project} animationIndex={index}/>
           </div>
         ))}
       </div>

@@ -3,10 +3,11 @@ import { Link } from "react-router";
 import RightArrow from "../../icons/RightArrow";
 import Github from "../../icons/Github";
 import ExternalLink from "../../icons/ExternalLink";
+import type { Project } from "../ProjectGrid/ProjectGrid";
 
 import './projectCard.css';
 
-export default function ProjectCard({ index, animationIndex }: { index: number, animationIndex: number }) {
+export default function ProjectCard({ project, animationIndex }: { project: Project, animationIndex: number }) {
   return (
     <>
       <motion.div
@@ -33,30 +34,39 @@ export default function ProjectCard({ index, animationIndex }: { index: number, 
         className='group project-card'
       >
         <div className='project-card-img'>
-          <img className='card-img' src={`/test.jpg`} alt={`Project ${index}`} />
+          <img className='card-img' src={project.image} alt={project.title} />
         </div>
 
         <div className='project-year-badge'>
-          <span>2023</span>
+          <span>{project.year}</span>
         </div>
 
         <div className='gradient-bridge' />
 
         <div className='project-card-content'>
           <h3 className='project-card-container'>
-            <span className='project-card-title'>Title</span>
-            <span className="project-card-subtitle">6 months</span>
+            <span className='project-card-title'>{project.title}</span>
           </h3>
 
-          <p className="project-card-description">description</p>
+          <p className="project-card-description">{project.description}</p>
 
-          <div className="project-card-tech">
-            <p className='tech-badge'>Typescript</p>
-            <p className='tech-badge'>React</p>
-            <p className='tech-badge'>+2</p>
-          </div>
+          {project.techStack?.length > 0 && (
+            <div className="project-card-tech">
+              {project.techStack.slice(0, 3).map((tech) => (
+                <p key={tech} className="tech-badge">
+                  {tech}
+                </p>
+              ))}
 
-          <div className="project-card-links">
+              {project.techStack.length > 3 && (
+                <p className="tech-badge">
+                  +{project.techStack.length - 3}
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* <div className="project-card-links">
             <Link className='project-link' to={`/projects/${index}`} aria-label={`View details for project ${index}`}>
               View Details
               <RightArrow />
@@ -71,7 +81,7 @@ export default function ProjectCard({ index, animationIndex }: { index: number, 
                 <ExternalLink />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </>

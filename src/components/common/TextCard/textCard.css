@@ -3,7 +3,7 @@
 
 .text-card {
   @apply relative border border-white/5 rounded-2xl cursor-pointer 
-    bg-gradient-to-br from-white/5 to-white/0 
+    bg-gradient-to-br from-white/5 to-white/0 h-full
     overflow-hidden transition-all duration-300;
 
   .text-card-content {

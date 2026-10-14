@@ -1,9 +1,20 @@
 import PageTitle from "../common/PageTitle/PageTitle";
 import TextCard from "../common/TextCard/TextCard";
 
+import skillsData from '../../assets/skills.json';
+
+export type SkillCategory = {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  skills: string[];
+}
+
 
 export default function TextGrid() {
-  const projects = Array.from({ length: 6 }, (_, i) => i + 1);
+  const skills = skillsData;
+
   return (
     <div className="mt-10">
       <PageTitle
@@ -12,12 +23,12 @@ export default function TextGrid() {
       />
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8'>
-        {projects.map((project, index) => (
+        {skills.map((skill, index) => (
           <div
-            key={project}
+            key={skill.id}
             className='transition-all duration-1000'
           >
-            <TextCard animationIndex={index} />
+            <TextCard skill={skill} animationIndex={index} />
           </div>
         ))}
       </div>

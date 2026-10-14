@@ -1,11 +1,9 @@
-import { Link } from "react-router";
-
-import Github from '../icons/Github';
 import ExternalLink from "../icons/ExternalLink";
 import Mail from "../icons/Mail";
 import Location from "../icons/Location";
 
 import './info.css';
+import File from "../icons/File";
 
 export default function Info() {
   return (
@@ -51,9 +49,10 @@ export default function Info() {
             </div>
 
             <div className='info-links'>
-              <Link to={'/projects'} className={'text icon ghost small relative'}>
-                <Github /> Resume
-              </Link>
+              <a href="/documents/Christina_Saroglaki_CV.pdf" className={'text icon ghost small relative'} target="_blank" 
+                download="Christina_Saroglaki_CV.pdf">
+                <File /> Resume
+              </a>
               <a href="https://github.com/ChristinaSarogl" className={'text icon ghost small relative'} target="_blank">
                 GitHub <ExternalLink />
               </a>

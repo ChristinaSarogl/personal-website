@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-
-import './timelineCard.css';
+import type { Experience } from "../../Timeline/Timeline";
 import Plus from "../../icons/Plus";
 
-export default function TimelineCard({ animationIndex }: { animationIndex: number }) {
+import './timelineCard.css';
+
+export default function TimelineCard({ job, animationIndex }: { job: Experience; animationIndex: number }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,27 +35,27 @@ export default function TimelineCard({ animationIndex }: { animationIndex: numbe
           },
         },
       }}
-      className='group timeline-entry relative max-w-7xl'
+      className='group timeline-entry relative'
     >
       <div className="timeline-blob"></div>
 
       <div className="timeline-info">
         <div>
-          <h3 className="timeline-info-title">03/2026 - Present</h3>
-          <span className="timeline-info-subtitle" >Nicosia, Cyprus / Hybrid</span>
+          <h3 className="timeline-info-title">{job.startDate} - {job.current ? "Present" : job.endDate}</h3>
+          <span className="timeline-info-subtitle" >{job.location}</span>
         </div>
 
         <div className="timeline-card">
           <div className="timeline-card-header" onClick={toggleCard}>
             <div>
-              <p className='timeline-card-title space-grotesk'>Role</p>
-              <p className='text-secondary'>Company</p>
+              <p className='timeline-card-title space-grotesk'>{job.position}</p>
+              <p className='text-secondary'>{job.company}</p>
             </div>
 
             <button
               type="button"
               className="timeline-card-icon"
-              onClick={(e) => {e.stopPropagation(); toggleCard();}}
+              onClick={(e) => { e.stopPropagation(); toggleCard(); }}
               aria-expanded={isOpen}
               aria-label={isOpen ? "Collapse details" : "Expand details"}
             >
@@ -91,17 +92,26 @@ export default function TimelineCard({ animationIndex }: { animationIndex: numbe
 
                 <div className="timeline-card-content">
                   <p>
-                    Lead frontend infrastructure across the dashboard product.
-                    Reduced build times by 40% and shipped the new analytics platform used by 300k+ developers globally.
+                    {job.description}
                   </p>
 
-                  <div className="timeline-card-tags">
-                    <span>React</span>
-                    <span>Next.js</span>
-                    <span>Rust</span>
-                    <span>Edge Runtime</span>
-                  </div>
+                  {job.highlights?.length > 0 && (
+                    <ul className="list-disc px-8 pb-5">
+                      {job.highlights.map((highlight, index) => (
+                        <li key={index} className="text-gray-300">{highlight}</li>
+                      ))}
+                    </ul>
+                  )}
 
+                  {job.technologies?.length > 0 && (
+                    <div className="timeline-card-tags">
+                      {job.technologies.map((tech, index) => (
+                        <span key={index}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
               </motion.div>

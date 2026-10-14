@@ -1,0 +1,72 @@
+[
+  {
+    "id": "netu-group",
+    "company": "NetU Group",
+    "position": "Full Stack Software Developer",
+    "location": "Nicosia, Cyprus / Hybrid",
+    "startDate": "04/2026",
+    "endDate": null,
+    "current": true,
+    "description": "Developing and maintaining full-stack solutions for a government platform, working across frontend, backend, and deployment processes.",
+    "highlights": [
+      "Developed multiple application modules end-to-end using Java, Bootstrap, and MySQL.",
+      "Deployed application updates to validation environments using Jenkins.",
+      "Collaborated with QA teams and end users during multiple User Acceptance Testing (UAT) cycles, resolving issues under tight deadlines.",
+      "Mentored three summer interns, providing technical guidance and support."
+    ],
+    "technologies": [
+      "Java",
+      "Bootstrap",
+      "MySQL",
+      "Jenkins",
+      "UAT"
+    ]
+  },
+  {
+      "id": "eratosthenes",
+      "company": "ERATOSTHENES Centre of Excellence",
+      "position": "Assistant Researcher A'",
+      "location": "Limassol, Cyprus / Hybrid",
+      "startDate": "03/2025",
+      "endDate": "04/2026",
+      "current": false,
+      "description": "Worked at the intersection of software development and applied AI research, contributing to web platforms and machine learning solutions.",
+      "highlights": [
+        "Contributed to the development of the AfroGrow platform using Spring, React, SQL, and Docker.",
+        "Developed and evaluated machine learning models for classification and detection tasks, achieving performance metrics above 80%.",
+        "Contributed to a remote tree detection pipeline presented at the AI & Data Science Workshop 2025."
+      ],
+      "technologies": [
+        "Spring",
+        "React",
+        "SQL",
+        "Docker",
+        "Python",
+        "Machine Learning",
+        "Computer Vision"
+      ]
+    },
+    {
+      "id": "deloitte-digital",
+      "company": "Deloitte Digital",
+      "position": "Junior Web Developer",
+      "location": "Thessaloniki, Greece / Hybrid",
+      "startDate": "06/2022",
+      "endDate": "07/2023",
+      "current": false,
+      "description": "Developed and maintained enterprise web experiences, collaborating with cross-functional teams to deliver scalable, reusable solutions.",
+      "highlights": [
+        "Developed over 20 responsive and reusable Adobe Experience Manager (AEM) components based on Figma designs.",
+        "Built page templates that improved content authoring efficiency and reduced maintenance effort.",
+        "Led a three-developer team in migrating more than 500 AEM pages, ensuring high accuracy.",
+        "Collaborated with cross-functional teams to troubleshoot issues and deliver updates under strict deadlines."
+      ],
+      "technologies": [
+        "Adobe Experience Manager",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Figma"
+      ]
+    }
+]
