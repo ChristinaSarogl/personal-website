@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
-import RightArrow from "../../icons/RightArrow";
+// import { Link } from "react-router";
+// import RightArrow from "../../icons/RightArrow";
 import Github from "../../icons/Github";
 import ExternalLink from "../../icons/ExternalLink";
 import type { Project } from "../ProjectGrid/ProjectGrid";
