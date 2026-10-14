@@ -1,7 +1,7 @@
 import PageTitle from "../common/PageTitle/PageTitle";
 import TextCard from "../common/TextCard/TextCard";
 
-import skillsData from '../../assets/skills.json';
+import skillsData from '../../assets/data/skills.json';
 
 export type SkillCategory = {
   id: string;

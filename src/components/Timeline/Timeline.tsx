@@ -1,6 +1,6 @@
 import PageTitle from "../common/PageTitle/PageTitle";
 import TimelineCard from "../common/TimelineCard/TimelineCard";
-import experienceData from '../../assets/experience.json';
+import experienceData from '../../assets/data/experience.json';
 
 import './timeline.css';
 

@@ -3,7 +3,8 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import Pagination from '../Pagination/Pagination';
 
 import './projectgrid.css';
-import projectsData from '../../../assets/projects.json';
+import projectsData from '../../../assets/data/projects.json';
+
 
 type ProjectGridProps = {
   displayed?: number;
