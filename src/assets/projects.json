@@ -20,8 +20,8 @@
     ],
     "year": "2026",
     "github": "https://github.com/yourusername/portfolio",
-    "live": "https://yourwebsite.com",
-    "image": "/images/projects/personal-website.png",
+    "live": "https://christinasarogl.github.io/personal-website/",
+    "image": "/images/placeholder.png",
     "category": "web",
     "status": "In process"
   },
@@ -49,7 +49,7 @@
     "year": "2025",
     "github": null,
     "live": "https://oxygen-bookings.appwrite.network/",
-    "image": "/images/projects/oxygen-bookings.png",
+    "image": "/images/placeholder.png",
     "category": "web",
     "status": "completed"
   },
@@ -76,7 +76,7 @@
     "year": "2025",
     "github": "https://github.com/ChristinaSarogl/Allergens_Prediction",
     "live": null,
-    "image": "/images/projects/allergens-prediction.png",
+    "image": "/images/placeholder.png",
     "category": "ai",
     "status": "completed"
   },
@@ -94,7 +94,7 @@
     "year": "2024",
     "github": "https://github.com/ChristinaSarogl/Computer_Vision",
     "live": null,
-    "image": "/images/projects/computer-vision.png",
+    "image": "/images/placeholder.png",
     "category": "ai",
     "status": "completed"
   },
@@ -113,7 +113,7 @@
     "year": "2025",
     "github": "https://github.com/ChristinaSarogl/Connect-Four",
     "live": null,
-    "image": "/images/projects/connect-four.png",
+    "image": "/images/placeholder.png",
     "category": "ai",
     "status": "completed"
   }, 
@@ -140,7 +140,7 @@
     "year": "2022",
     "github": "https://github.com/ChristinaSarogl/GeoScavenger",
     "live": null,
-    "image": "/images/projects/geoscavenger.png",
+    "image": "/images/placeholder.png",
     "category": ["web", "mobile"],
     "status": "completed"
   }, 
@@ -166,7 +166,7 @@
     "year": "2022",
     "github": "https://github.com/ChristinaSarogl/BookHood",
     "live": null,
-    "image": "/images/projects/bookhood.png",
+    "image": "/images/placeholder.png",
     "category": "web",
     "status": "completed"
   }

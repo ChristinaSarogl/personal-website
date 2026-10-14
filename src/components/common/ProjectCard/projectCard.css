@@ -8,7 +8,7 @@
     overflow-hidden transition-all duration-300;
 
     .project-card-img {
-      @apply h-60 relative overflow-hidden;
+      @apply h-52 relative overflow-hidden;
 
       .card-img {
         @apply w-full h-full object-cover transition-transform duration-1000 opacity-50
@@ -26,7 +26,7 @@
     }
 
     .project-card-content {
-      @apply p-6 pt-0 space-y-3;
+      @apply p-6 space-y-3;
 
       .project-card-container {
         @apply flex items-center justify-between;

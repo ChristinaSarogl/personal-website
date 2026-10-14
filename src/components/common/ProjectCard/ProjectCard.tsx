@@ -66,22 +66,26 @@ export default function ProjectCard({ project, animationIndex }: { project: Proj
             </div>
           )}
 
-          {/* <div className="project-card-links">
-            <Link className='project-link' to={`/projects/${index}`} aria-label={`View details for project ${index}`}>
+          <div className="project-card-links">
+            {/* <Link className='project-link' to={`/projects/${animationIndex}`} aria-label={`View details for project ${animationIndex}`}>
               View Details
               <RightArrow />
-            </Link>
+            </Link> */}
 
             <div className='project-link-icons'>
-              <Link className='project-link-icon' to={`/projects/${index}`} aria-label={`View project ${index} on GitHub`}>
-                <Github />
-              </Link>
+              {project.github && (
+                <a className='project-link-icon' href={project.github} target="_blank" aria-label={`View project ${project.title} on GitHub`}>
+                  <Github />
+                </a>
+              )}
 
-              <Link className='project-link-icon' to={`/projects/${index}`} aria-label={`View live project`}>
-                <ExternalLink />
-              </Link>
+              {project.live && (
+                <a className='project-link-icon' href={project.live} target="_blank" aria-label={`View live project`}>
+                  <ExternalLink />
+                </a>
+              )}
             </div>
-          </div> */}
+          </div>
         </div>
       </motion.div>
     </>
