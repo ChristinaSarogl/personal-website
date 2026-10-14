@@ -13,5 +13,21 @@
 }
 
 .text-color {
-  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  @apply bg-gradient-to-r! from-primary! to-secondary! bg-clip-text! text-transparent! pr-1 pb-1 w-fit;
+}
+
+.page-bg {
+  @apply absolute inset-0 overflow-hidden ;
+
+  .orb {
+    @apply absolute w-80 h-80 rounded-full blur-3xl;
+
+    &.left {
+      @apply top-1 left-1/50 bg-blue-500/20;
+    }
+
+    &.right {
+      @apply top-50 right-1/40 bg-purple-500/20;
+    }
+  }
 }

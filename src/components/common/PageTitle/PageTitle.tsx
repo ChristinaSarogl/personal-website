@@ -4,24 +4,30 @@ import './pageTitle.css';
 
 type PageTitleProps = {
   title: string;
-  subtitle?: string;
+  subtitle?: string | string[];
   description?: string;
-  titleClassName?: string;
+  style?: string;
   linkInfo?: {
     target: string,
     value: string
   };
 };
 
-export default function PageTitle({ title, subtitle, description, titleClassName, linkInfo }: PageTitleProps) {
+export default function PageTitle({ title, subtitle, description, style, linkInfo }: PageTitleProps) {
   return (
-    <div className='title-container'>
+    <div className={`title-container ${style || ''}`}>
       <div className='text-container'>
         {subtitle &&
-          <p className='sub-title'>{subtitle}</p>
+          <p className='sub-title'>
+            {Array.isArray(subtitle) ? subtitle.map((line, index) => (
+              <span key={index} className={index === 0 ? 'text-color' : ''}>
+                {line}
+              </span>
+            )) : subtitle}
+          </p>
         }
 
-        <h2 className={`featured-title ${titleClassName || ''}`}>{title}</h2>
+        <h2 className='featured-title space-grotesk'>{title}</h2>
 
         {description &&
           <p className='description'>{description}</p>

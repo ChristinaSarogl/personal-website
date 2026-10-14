@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.timeline-entry {
+  .timeline-blob {
+    @apply absolute left-0 top-1.5 w-4 h-4 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 hidden md:block blur-xs;
+
+  }
+
+  .timeline-info {
+    @apply md:pl-8 lg:pl-12 flex flex-wrap flex-col md:flex-row gap-3 md:gap-10 lg:gap-[7rem];
+
+    .timeline-info-title {
+      @apply text-sm font-semibold text-white;
+    }
+
+    .timeline-info-subtitle {
+      @apply text-gray-500 text-sm font-medium;
+    }
+  }
+
+  .timeline-card {
+    @apply relative border border-white/5 rounded-2xl cursor-pointer 
+    bg-gradient-to-br from-white/5 to-white/0 overflow-hidden transition-all duration-300 flex-1;
+
+    .timeline-card-header {
+      @apply px-4 md:px-6 py-3 md:py-4 space-y-1 flex justify-between;
+
+      .timeline-card-title {
+        @apply text-xl lg:text-2xl font-bold;
+      }
+
+      .timeline-card-icon {
+        @apply w-10 h-10 border border-white/10 flex items-center justify-center
+          rounded-full hover:bg-white/5 hover:border-primary/40 transition-all duration-300;
+
+          svg {
+            @apply w-5 h-5;
+          }
+      }
+    }
+
+    .timeline-card-content {
+      @apply px-4 md:px-6 py-3 md:py-4 space-y-1;
+
+      p {
+        @apply text-sm text-white/60 leading-relaxed mb-4;
+      }
+      
+      .timeline-card-tags {
+        @apply flex flex-wrap gap-2;
+
+        span {
+          @apply text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/60;
+        }
+      }
+    }
+  }
+
+}

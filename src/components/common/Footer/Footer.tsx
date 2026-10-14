@@ -14,10 +14,10 @@ export default function Footer() {
           </div>
 
           <div className="footer-links">
-            <Link to=''onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Top</Link>
+            <Link to='' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Top</Link>
             <Link to='/projects'>Projects</Link>
             <Link to='/about'>Bio</Link>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/'>Home</Link>
           </div>
         </div>
       </div>

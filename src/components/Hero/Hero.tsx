@@ -73,8 +73,8 @@ export default function Hero() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h1 className="hero-title">
-            <motion.span
+          <h1 className="hero-title space-grotesk">
+            <motion.span 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}>
@@ -105,9 +105,9 @@ export default function Hero() {
 
         <motion.div variants={itemVariants} className="social-links">
           {SOCIAL_LINKS.map(({ key, Icon, path }) => (
-            <Link key={key} to={path} className="icon ghost">
+            <a key={key} href={path} className="icon ghost" target="_blank">
               <Icon />
-            </Link>
+            </a>
           ))}
         </motion.div>
 

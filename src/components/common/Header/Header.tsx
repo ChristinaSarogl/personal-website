@@ -9,7 +9,7 @@ import "../../../styles/buttons.css";
 const NAV_LINKS = [
   { key: "Home", label: "Home", path: "" },
   { key: "About", label: "About", path: "about" },
-  { key: "Projects", label: "Projects", path: "projects"}
+  { key: "Projects", label: "Projects", path: "projects" }
 ];
 
 export default function Header() {
@@ -17,9 +17,9 @@ export default function Header() {
 
   return (
     <section>
-      <motion.header 
-        initial = {{ y: -100, opacity:0 }}
-        animate = {{ y: 0, opacity: 1 }}
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: ['easeIn'] }}
         className="header">
         <div className="header-container">
@@ -29,7 +29,7 @@ export default function Header() {
 
           <nav className="desktop-only" aria-label="Navigation">
             <ul className="nav-links" role="list">
-              {NAV_LINKS.map(({key, label, path}) => (
+              {NAV_LINKS.map(({ key, label, path }) => (
                 <li key={key}>
                   <NavLink to={`/${path}`}
                     className={({ isActive }) => isActive ? "relative active" : "relative"} aria-label={`${label}`}>
@@ -38,15 +38,15 @@ export default function Header() {
                   </NavLink>
                 </li>
               ))}
-              <NavLink to={`/contact`} className={'text color small'} aria-label='contact'>
+              <a href="mailto:xristsar@gmail.com" className={'text color small'} aria-label='contact'>
                 Let's Talk
-              </NavLink>
-            </ul>            
+              </a>
+            </ul>
           </nav>
 
           <div className="mobile-menu">
             <button type="button" aria-label="Open menu" aria-expanded={isOpen}>
-              <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
+              <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
             </button>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Header() {
 
       <nav className={`mobile-elements ${isOpen ? 'open' : 'closed'}`} aria-label="Mobile menu">
         <ul className="nav-links" role="list">
-          {NAV_LINKS.map(({key, label, path}) => (
+          {NAV_LINKS.map(({ key, label, path }) => (
             <li key={key}>
               <NavLink to={`/${path}`}
                 className={"relative"} aria-label={`${label}`}
@@ -66,9 +66,9 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <NavLink to={`/contact`} className={'text color small'} aria-label='contact'>
+        <a href="mailto:xristsar@gmail.com" className={'text color small'} aria-label='contact'>
           Let's Talk
-        </NavLink>
+        </a>
       </nav>
     </section>
   )

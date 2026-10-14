@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "../../../styles/theme.css";
+
+.text-card {
+  @apply relative border border-white/5 rounded-2xl cursor-pointer 
+    bg-gradient-to-br from-white/5 to-white/0 
+    overflow-hidden transition-all duration-300;
+
+  .text-card-content {
+    @apply p-6 space-y-3;
+
+    .text-card-title {
+      @apply text-xl md:text-2xl tracking-tighter transition-all;
+    }
+
+    .text-card-list {
+      @apply flex flex-wrap gap-2;
+
+      .text-card-item {
+        @apply px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70
+          text-sm md:text-base;
+      }
+    }
+  }
+}

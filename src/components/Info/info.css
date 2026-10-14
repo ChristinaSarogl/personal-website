@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "../../styles/theme.css";
+
+.info-container {
+  @apply flex flex-col gap-2 mb-8;
+
+  .info-title-container {
+    .info-subtitle {
+      @apply flex flex-col md:flex-row gap-1 md:gap-5;
+
+      span {
+        @apply tracking-widest text-white/70 text-xs uppercase transition-all duration-1000 translate-y-0 opacity-100;
+      }
+    }
+
+    .info-title {
+      @apply text-4xl md:text-4xl lg:text-7xl font-bold my-2 leading-tight tracking-tighter;
+    }
+  }
+
+  .info-content {
+    @apply text-gray-200 text-base lg:text-lg leading-relaxed tracking-wide;
+  }
+
+  .info-cta {
+    @apply flex flex-wrap items-center gap-6 mt-5 lg:mt-10;
+
+    .info-details {
+      @apply flex flex-row gap-4 lg:mt-4 text-sm mx-auto md:mx-0;
+
+      svg {
+        @apply w-4 h-4 text-white/50;
+      }
+
+      p {
+        @apply flex items-center gap-2 text-white/50 hover:text-white transition-colors;
+      }
+    }
+
+    .info-links {
+      @apply flex items-center gap-4 mx-auto md:mx-0 md:ml-auto;
+    }
+  }
+}

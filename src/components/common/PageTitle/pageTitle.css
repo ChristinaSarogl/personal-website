@@ -3,10 +3,9 @@
 
 .title-container {
   @apply flex flex-col gap-2 mb-8;
-  
+
   .sub-title {
-    @apply tracking-widest text-white/70 text-xs uppercase 
-      transition-all duration-1000 translate-y-0 opacity-100;
+    @apply tracking-widest text-white/70 text-xs uppercase transition-all duration-1000 translate-y-0 opacity-100;
   }
 
   .featured-title {
@@ -18,7 +17,21 @@
   }
 
   .title-link {
-    @apply flex items-center gap-4 tracking-[0.2em] justify-end
-      text-zinc-400 hover:text-white transition-colors;
+    @apply flex items-center gap-4 tracking-[0.2em] justify-end text-zinc-400 hover:text-white transition-colors;
+  }
+
+  &.page-title {
+    .sub-title {
+      @apply flex flex-col md:flex-row gap-1 md:gap-5;
+
+      span {
+        @apply tracking-widest text-white/70 text-xs uppercase transition-all duration-1000 translate-y-0 opacity-100;
+      }
+    }
+
+    .featured-title {
+      @apply text-4xl md:text-4xl lg:text-7xl font-bold my-2
+      leading-tight tracking-tighter;
+    }
   }
 }

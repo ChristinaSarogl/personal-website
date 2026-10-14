@@ -17,7 +17,7 @@ export default function App() {
         <Header />
         <Hero />
 
-        <div className='px-6 md:px-12 lg:px-40 overflow-hidden'>
+        <div className='mb-20 px-6 md:px-12 lg:px-40 overflow-hidden'>
           <Divider />
           <FeaturedWork />
           <Contact />

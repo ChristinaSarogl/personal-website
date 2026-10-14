@@ -2,13 +2,25 @@
 @import "../../styles/theme.css";
 
 .contact-container {
-    @apply py-10 text-center;
+  @apply py-10 text-center;
 
-    .contact-title {
-        @apply md:mt-5 lg:mt-20 text-center text-3xl md:text-4xl lg:text-6xl;
+  .glass-card {
+    @apply relative rounded-3xl overflow-hidden border border-white/10 p-12 text-center;
+
+    .glass-card-bg {
+      @apply absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10;
     }
 
-    .contact-description {
-        @apply mt-8 md:mt-10 mb-10 md:mb-15 text-lg text-white/70 max-w-2xl mx-auto text-center;
+    .glass-card-orb {
+      @apply absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl pointer-events-none;
     }
+  }
+
+  .contact-title {
+    @apply md:mt-5 lg:mt-20 text-center text-3xl md:text-4xl lg:text-6xl;
+  }
+
+  .contact-description {
+    @apply mt-8 md:mt-10 mb-10 md:mb-15 text-lg text-white/70 max-w-2xl mx-auto text-center;
+  }
 }

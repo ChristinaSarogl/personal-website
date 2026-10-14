@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router";
 import { useEffect } from "react";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
+import AboutPage from "../pages/AboutPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,7 +22,7 @@ export default function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        {/* <Route path="/about" element={<AboutPage />} /> */}
+        <Route path="/about" element={<AboutPage />} />
 
         {/* 404 */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}

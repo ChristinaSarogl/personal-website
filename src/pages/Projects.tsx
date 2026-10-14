@@ -33,15 +33,23 @@ export default function Projects() {
           initial="hidden"
           animate="visible"
           className='py-10 px-6 md:px-12 lg:px-40 overflow-hidden'>
-          <PageTitle
-          subtitle="Seven builds - one engineering point of view"
-            title='Projects'
-            description="From full-stack platforms to machine-learning projects, 
-              this is where curiosity meets code—and complex challenges become software that works."
-            titleClassName='text-color w-1/2'
-          />
 
-          <ProjectGrid displayed={9}/>
+          <div className="page-bg">
+            <div className="orb left" />
+            <div className="orb right" />
+          </div>
+
+          <div className="lg:mb-15">
+            <PageTitle
+              subtitle={["Projects", "Seven builds - one engineering point of view"]}
+              title="Things I've Built"
+              description="From full-stack platforms to machine-learning projects, 
+              this is where curiosity meets code—and complex challenges become software that works."
+              style='page-title'
+            />
+          </div>
+
+          <ProjectGrid displayed={6} />
 
         </motion.div>
         <Footer />
