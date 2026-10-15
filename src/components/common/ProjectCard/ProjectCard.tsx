@@ -8,6 +8,10 @@ import type { Project } from "../ProjectGrid/ProjectGrid";
 import './projectCard.css';
 
 export default function ProjectCard({ project, animationIndex }: { project: Project, animationIndex: number }) {
+  const getAssetUrl = (path: string): string => {
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  };
+
   return (
     <>
       <motion.div
@@ -34,7 +38,7 @@ export default function ProjectCard({ project, animationIndex }: { project: Proj
         className='group project-card'
       >
         <div className='project-card-img'>
-          <img className='card-img' src={project.image} alt={project.title} />
+          <img className='card-img' src={getAssetUrl(project.image)} alt={project.title} />
         </div>
 
         <div className='project-year-badge'>
